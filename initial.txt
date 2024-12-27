@@ -1,0 +1,77 @@
+- Clear Requirement 
+- Tech Stack 
+    - UI - Tailwind
+    -Data - Context or Redux etc etc 
+    -Bundler
+- Layout and Approach 
+  - Header 
+         Navbar 
+         Logo 
+         Search 
+         User Profile 
+  - Body 
+    - SideBar  
+      - Menu Items 
+    - Main Container
+        - Suggestions
+        - Video Container Component
+            -Video Cards -> On Click of Video 
+  - Same Header 
+  - WatchVideo Component 
+      - Same Header and Side Panel 
+      - Change MainContainer 
+  - Searchbar - cache data - debounce api calls 
+      Importance of debouncing
+      Many users can do 
+      In vanilla js its very difficul task 
+      in React using useEffect very very easy
+      api calls after interval and clear interval
+      Cache Results - result store
+      Array search complecit y- BigO(n)
+      Maping Hash Object complexity BigO(1)
+      Make a FIFO
+
+
+  - Right Suggestions 
+    - Comment Sections
+    Nested Comments 
+  -  Search Results Fetch 
+  - Live Chats
+    - Challenges - UI Get live data and show on ui 
+    - Two ways to acheive 
+        Web Socket - two way handshake 
+                   - UI send data server send back very fast
+                   - Bi Directional
+                   - No Regular Interval 
+                   - Initial setup takes time 
+                   - Send data whenever we want to 
+                   - Heavy Connection 
+        API Polling 
+               Ui request data server sends data 
+               Uni Directional 
+               has interval 
+               ui can keep checking after few seconds to get data 
+        Example Email - Polling delay is fine 
+        Example Stock ,crypto market app,whatsap - Web Sockets 
+        Even youtube uses api polling and the comments might not be in order because it makes call after some interval 
+        Makes so many Youtube live api calls so many and page doesnt freez because of so many divs aded why? 
+
+        Why Does page doesnt freeze?
+        We think youtube keep pushing everything NO IF IT DID THAT EXPLODE DOM AND PAGE SIZE IS INCREASED
+
+        Because once message reacehs certain number it cleans up from page very fast 
+        So when many messages are on stack and we are on top message it wont delete it 
+
+        More Smart when we are in mac it changes the number of items it can be seen increases
+        It configures diffrent ui based on diffrent browsers
+       
+
+       Polling - setInterval 
+
+  
+
+        
+- Watch Container 
+   - Video Player 
+   - Nested Comments 
+   - Right Side Live Chat Feature 
