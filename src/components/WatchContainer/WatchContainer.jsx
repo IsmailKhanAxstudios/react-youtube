@@ -5,6 +5,7 @@ import { closeMenu } from "../../store/appSlice";
 import { useSearchParams } from "react-router-dom";
 
 import CommentsContainer from "../CommentsList/CommentsList";
+import LiveChat from "../LiveChat/LiveChat";
 
 const WatchContainer = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const WatchContainer = () => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div>
+    <div className="flex w-full gap-5">
       <div className="grid grid-flow-col">
         <div className="col-span-8">
           <iframe
@@ -28,11 +29,13 @@ const WatchContainer = () => {
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
+          <div>
+            <CommentsContainer />
+          </div>
         </div>
       </div>
-      <div>
-        <CommentsContainer />
-      </div>
+
+      <LiveChat />
     </div>
   );
 };

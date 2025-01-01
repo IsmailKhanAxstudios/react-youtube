@@ -163,3 +163,70 @@ export const commentsData = [
     ],
   },
 ];
+
+export const generateRandomName = () => {
+  const firstNames = [
+    "John",
+    "Jane",
+    "Michael",
+    "Emily",
+    "Chris",
+    "Amanda",
+    "David",
+
+    "Sophia",
+    "James",
+    "Olivia",
+  ];
+  const lastNames = [
+    "Smith",
+    "Johnson",
+    "Williams",
+    "Brown",
+    "Jones",
+    "Garcia",
+    "Martinez",
+    "Hernandez",
+    "Lopez",
+    "Davis",
+  ];
+
+  // Get a random index for the first and last names
+  const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+  const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+
+  return `${firstName} ${lastName}`;
+};
+
+export const generateRandomYouTubeChatMessage = () => {
+  const messages = [
+    "Hey everyone! Loving the stream! 😄",
+    "Can someone tell me what game they're playing? 🤔",
+    "This is so funny, I can't stop laughing 😂",
+    "Great content as always, keep it up! 👍",
+    "Who's the guest on the stream today? 👀",
+    "Wow, this gameplay is amazing! 👏",
+    "Any tips for beginners? I'm new to this game! 🎮",
+    "This is the best stream ever, I’m learning so much! 🙌",
+    "Can we get a shoutout, please? 😅",
+    "Is the stream lagging for anyone else? 😕",
+    "Love your energy! Keep going! 🔥",
+    "This stream is 🔥🔥🔥, more of this please!",
+    "Does anyone know where I can find that item? 🧐",
+    "I'm so glad I found this channel, you’re awesome! 😍",
+    "Who's excited for the next update? 🎉",
+    "Hey [Streamer Name], you’re killing it! 👏",
+    "I can’t believe this just happened, what a plot twist! 😱",
+    "The chat is moving too fast, I can barely keep up! 😵",
+    "Subscribing right now, this is great content! 🎥",
+    "Anyone here from Twitter? 🙋‍♂️🙋‍♀️",
+    "Do you stream on other platforms too? 🌐",
+  ];
+
+  // Get a random index for the messages
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+  return randomMessage;
+};
+
+console.log(generateRandomYouTubeChatMessage()); // Example output: "Love your energy! Keep going! 🔥"
